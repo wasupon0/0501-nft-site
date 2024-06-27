@@ -2,17 +2,30 @@
   --font-dark: #2b283a;
   --primary: #5f29a3;
   --secondary: #d0aaff;
+  --thirdly: #f0e0ff;
   --font-light: whitesmoke;
   --accent: #ef5839;
   --active: #d4b44c;
+  --highlight: #ec907d;
 }
 
 body {
-  color: var(--font-dark);
+  background-color: var(--font-dark);
+  color: var(--font-light);
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
+}
+
+::selection {
+  background: var(--highlight);
+  color: var(--font-dark);
+}
+
+h2::selection {
+  background: var(--active);
+  color: var(--font-dark);
 }
 
 header {
@@ -23,12 +36,16 @@ header {
 
 h1 {
   color: var(--font-light);
+  font-family: "Nunito", sans-serif;
   font-size: 2rem;
   margin: 0;
 }
 
 h2 {
+  background-color: var(--highlight);
   color: var(--font-dark);
+  display: inline-block;
+  font-family: "Nunito", sans-serif;
   font-size: 1.5rem;
   margin-top: 0;
 }
@@ -40,8 +57,19 @@ h3 {
 }
 
 p {
-  color: var(--font-dark);
+  color: var(--font-light);
   font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.section-two {
+  background-color: var(--primary);
+  color: var(--font-light);
+}
+
+.section-one {
+  background: url(images/circle-scatter-haikei.svg) no-repeat center;
+  display: block;
 }
 
 section {
@@ -50,8 +78,7 @@ section {
 }
 
 .main-image {
-  border: 1px solid red;
-  width: 99%;
+  width: 100%;
 }
 
 a {
@@ -62,4 +89,62 @@ a {
 
 a:hover {
   color: var(--active);
+}
+
+.container {
+  margin: 0 auto;
+  width: 620px;
+}
+
+.section-two-image {
+  border-radius: 5px;
+  width: 300px;
+}
+
+.container-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 620px;
+}
+
+footer {
+  background: url(images/layered-waves-haikei.svg) no-repeat center;
+  color: var(--primary);
+  font-weight: 500;
+  padding: 45px 0;
+  text-align: center;
+}
+
+.btn-dark {
+  background-color: var(--primary);
+  color: var(--font-light);
+}
+
+.btn-mid {
+  background-color: var(--thirdly);
+  color: var(--primary);
+}
+
+.btn-light {
+  background-color: var(--font-light);
+  color: var(--primary);
+}
+
+a:hover,
+a:focus {
+  background: var(--active);
+  color: var(--font-light);
+}
+
+.btn-dark,
+.btn-mid,
+.btn-light {
+  border-radius: 4.6px;
+  display: inline-block;
+  font-weight: 500;
+  margin: 10px;
+  padding: 10px 19px;
+  text-decoration: none;
 }
