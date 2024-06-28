@@ -30,8 +30,6 @@ h2::selection {
 
 header {
   background-color: var(--primary);
-  padding-bottom: 45px;
-  padding-top: 45px;
 }
 
 h1 {
@@ -58,8 +56,7 @@ h3 {
 
 p {
   color: var(--font-light);
-  font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.5;
 }
 
 .section-two {
@@ -72,12 +69,11 @@ p {
   display: block;
 }
 
-section {
-  padding-bottom: 45px;
-  padding-top: 45px;
-}
-
 .main-image {
+  display: block;
+  margin: 0 auto 2rem;
+  max-width: 800px;
+  min-width: 360px;
   width: 100%;
 }
 
@@ -93,27 +89,28 @@ a:hover {
 
 .container {
   margin: 0 auto;
-  width: 620px;
+  max-width: 800px;
+  outline: 1px solid tomato;
+  width: 90%;
 }
 
 .section-two-image {
   border-radius: 5px;
-  width: 300px;
+  margin-bottom: 1rem;
+  outline: 1px solid tomato;
+  width: 100%;
 }
 
-.container-img {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 620px;
+header,
+section,
+footer {
+  padding: 1.25rem 0;
 }
 
 footer {
   background: url(images/layered-waves-haikei.svg) no-repeat center;
   color: var(--primary);
   font-weight: 500;
-  padding: 45px 0;
   text-align: center;
 }
 
@@ -139,11 +136,12 @@ a:focus {
 }
 
 .btn {
-  border-radius: 4.6px;
-  display: inline-block;
+  border-radius: 5px;
+  display: block;
   font-weight: 500;
-  margin: 10px;
-  padding: 10px 19px;
+  margin: 0.625rem 0;
+  padding: 0.625rem 1.25rem;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -151,4 +149,27 @@ a:focus {
 .btn:active {
   background-color: var(--active);
   color: var(--primary);
+}
+
+@media (min-width: 480px) {
+  .section-two-image-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .section-two-image {
+    width: 48%;
+  }
+}
+
+@media (min-width: 768px) {
+  header,
+  section,
+  footer {
+    padding: 2.875rem 0;
+  }
+
+  .btn {
+    display: inline-block;
+    margin: 0.625rem 0.625rem 0.625rem 0;
+  }
 }
