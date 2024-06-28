@@ -85,10 +85,6 @@ a {
   text-underline-offset: 3px;
 }
 
-a:hover {
-  color: var(--active);
-}
-
 .container {
   margin: 0 auto;
   max-width: 800px;
@@ -231,5 +227,17 @@ ul {
 
   nav li {
     margin-left: 1.25em;
+  }
+
+  .nav-item:hover,
+  .nav-item:focus {
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+  }
+  .nav-item:active {
+    color: var(--active);
   }
 }
